@@ -1,0 +1,45 @@
+
+label {
+    font-family: "Raleway", sans-serif;
+    font-size: 11pt;
+  }
+  #submit-btn {
+    background: -webkit-linear-gradient(right, #9911d7, #3c16f8);
+    border: none;
+    border-radius: 21px;
+    box-shadow: 0px 1px 8px #8d24c6;
+    cursor: pointer;
+    color: white;
+    font-family: "Raleway SemiBold", sans-serif;
+    height: 42.3px;
+    margin: 0 auto;
+    margin-top: 20px;
+    transition: 0.25s;
+    width: 153px;
+  }
+  #submit-btn:hover {
+    box-shadow: 0px 1px 18px #3c16f8;
+  }
+  .form {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-border {
+    background: -webkit-linear-gradient(right, #3c16f8, #9911d7);
+    height: 1px;
+    width: 100%;
+  }
+  .form-content {
+    background: #fbfbfb;
+    border: none;
+    outline: none;
+    padding-top: 14px;
+  }
+  .underline-title {
+    background: -webkit-linear-gradient(right, #9911d7, #3c16f8);
+    height: 2px;
+    margin: -1.1rem auto 0 auto;
+    width: 89px;
+  }
+  

@@ -4,20 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Document</title>
 </head>
-<body>
+<body class="theme-dark">
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/signup" method="POST">
+    <!-- <form action="/signup" method="POST">
         <input type="text" name="userName" placeholder="User Name">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="password" name="confirmPassword" placeholder="Confirm Password">
         <input type="submit">
-    </form>
+    </form> -->
+    <div id="card">
+        <div id="card-content">
+          <div id="card-title">
+            <h2>Sign Up</h2>
+            <div class="underline-title"></div>
+          </div>
+          <form action="/signup" method="POST" class="form">
+            <label for="username" style="padding-top:8px">
+                &nbsp;Username
+              </label>
+            <input id="username" class="form-content" type="text" name="userName" />
+            <div class="form-border"></div>
+            
+            <label for="user-email" style="padding-top:8px">&nbsp;Email
+              </label>
+            <input id="user-email" class="form-content" type="email" name="email" />
+            <div class="form-border"></div>
+            
+            <label for="password" style="padding-top:8px">
+                &nbsp;Password
+              </label>
+            <input id="password" class="form-content" type="password" name="password" />
+            <div class="form-border"></div>
+            
+            <label for="password" style="padding-top:8px">
+                &nbsp;Confirm Password
+              </label>
+            <input id="password" class="form-content" type="password" name="confirmPassword"  />
+            <div class="form-border"></div>
+
+            <input id="submit-btn" type="submit" value="SIGN UP!" />
+            <!-- <a style="margin-top: 8px;" href="/signup" id="signup">Don't have account yet?</a> -->
+          </form>
+        </div>
+    </div>
 </body>
 </html>

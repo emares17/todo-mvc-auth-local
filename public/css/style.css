@@ -1,10 +1,73 @@
-h1{
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
 }
-.completed{
-    text-decoration: line-through;
-    color: gray;
+
+.theme-dark {
+    --bg-top-image: 0 0 url(/images/bg-desktop-dark.jpg) no-repeat;
+    --main-bg: hsl(235, 21%, 11%);
+    --todo-bg: hsl(235, 24%, 19%);
+    --todo-shadow: hsl(235, 21%, 11%);
+    --font-color: hsl(234, 39%, 85%);
+    --font-color-hover: #fff;
 }
-.not{
+
+.theme-light {
+    --bg-top-image: 0 0 url(/images/bg-desktop-light.jpg) no-repeat;
+    --main-bg: hsl(0, 0%, 98%);
+    --todo-bg: hsl(0, 0%, 98%);
+    --todo-shadow: hsl(235, 19%, 35%);
+    --font-color: hsl(236, 9%, 61%);
+    --font-color-hover: hsl(235, 21%, 11%);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font: 400 18px/1 'Josefin Sans', sans-serf;
+    background: var(--bg-top-image);
+    background-color: var(--main-bg);
+    background-size: contain;
+    color: var(--font-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+  }
+
+#card {
+    background: var(--todo-bg);
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 410px;
+    margin: 6rem auto 8.1rem auto;
+    width: 329px;
+  }
+#card-content {
+    padding: 12px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+#card-title {
+    font-family: "Raleway Thin", sans-serif;
+    letter-spacing: 4px;
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;
+    color: ;
+  }
+
+  #card-title a {
     text-decoration: underline;
-}
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
